@@ -1,1 +1,58 @@
-/* developer styles go here */
+h2{
+    padding: 1rem;
+}
+
+.hor-scroll > div{
+    flex: 0 0 330px;
+    height: 187px;
+    background-color:maroon;
+    border-radius: 10px;
+    margin: 1rem 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.hor-scroll{
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    height: 237.7px;
+    /* Removes the scrollbar in ff */
+    scrollbar-width: none;
+}
+
+.hor-scroll::-webkit-scrollbar{
+    background: transparent;
+    width: 0;
+}
+
+.hor-scroll > div:hover,
+.hor-scroll > div:active{
+    flex: 0 0 346.5px;
+    height: 205px;  
+}
+
+.parallax-image{
+    background-image: url(../img/movie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.parallax-image h2{
+    color: aliceblue;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    .hor-scroll{
+        scrollbar-width: unset;
+    }
+
+    .hor-scroll::-webkit-scrollbar{
+        background: grey;
+        width: 5px;
+    }
+}
